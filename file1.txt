@@ -1,3 +1,4 @@
 "Source file1"
 This is new line in this file
 bla bla bla 
+bla 2
