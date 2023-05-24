@@ -1,0 +1,225 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+}
+
+ul {
+	list-style-type: "- ";
+	margin: 0;
+	padding: 0;
+	margin-left: 20px;
+}
+
+table {
+	border-collapse: collapse;
+}
+th,
+td {
+	padding: 8px;
+	text-align: left;
+}
+
+.block-white {
+	color: var(--primary-color);
+	background-color: var(--secondary-color);
+	width: calc(100% - 200px);
+	overflow: hidden;
+	height: auto;
+	padding: 50px 100px;
+}
+.block-white .slider .button-left {
+	border-right-color: var(--primary-color);
+}
+.block-white .slider .button-right {
+	border-right-color: var(--primary-color);
+}
+.block-white .card {
+	color: var(--secondary-color);
+	background-color: var(--primary-color);
+}
+.block-white .card {
+	color: var(--secondary-color);
+	background-color: var(--primary-color);
+}
+.block-white th,
+.block-white td {
+	border: 1px solid var(--secondary-color);
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+}
+
+.block-black {
+	color: var(--secondary-color);
+	background-color: var(--primary-color);
+	width: calc(100% - 200px);
+	overflow: hidden;
+	height: auto;
+	padding: 50px 100px;
+}
+.block-black .slider .button-left {
+	border-right-color: var(--secondary-color);
+}
+.block-black .slider .button-right {
+	border-right-color: var(--secondary-color);
+}
+.block-black .card {
+	color: var(--primary-color);
+	background-color: var(--secondary-color);
+}
+.block-black th,
+.block-black td {
+	border: 1px solid var(--primary-color);
+	background-color: var(--secondary-color);
+	color: var(--primary-color);
+}
+
+.block-header {
+	font-size: 30px;
+	margin: 10px;
+	font-weight: bold;
+}
+.block-content {
+	font-size: 20px;
+	margin: 30px 20px;
+}
+
+.link {
+	color: var(--link-color);
+	text-decoration: none;
+	transition: 200ms;
+}
+.link:hover {
+	color: var(--link-hover-color);
+	transition: 200ms;
+}
+
+.cards {
+	display: block;
+	text-align: center;
+}
+.card {
+	margin: 10px;
+	border-radius: 1em;
+	min-width: 200px;
+	display: inline-block;
+	padding: 10px 20px;
+	transition: 400ms;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+}
+.card:hover {
+	background-color: var(--tertiary-color);
+	transition: 400ms;
+}
+.card img {
+	height: 300px;
+	width: 200px;
+}
+
+#slider {
+	text-align: center;
+	position: relative;
+}
+#slider .button-left {
+	cursor: pointer;
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-top: 100px solid transparent;
+	border-right: 20px solid;
+	border-bottom: 100px solid transparent;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	position: absolute;
+	margin: 0;
+	transition: 400ms;
+}
+#slider .button-left:hover {
+	border-right-color: var(--tertiary-color);
+	transition: 400ms;
+}
+#slider .button-right {
+	cursor: pointer;
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-top: 100px solid transparent;
+	border-left: 20px solid;
+	border-bottom: 100px solid transparent;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	position: absolute;
+	margin: 0;
+	transition: 400ms;
+}
+#slider .button-right:hover {
+	border-left-color: var(--tertiary-color);
+	transition: 400ms;
+}
+#slider #image {
+	display: inline-block;
+	max-height: 500px;
+	overflow: hidden;
+	margin: 0 20px 0 40px;
+	vertical-align: middle;
+}
+#slider #image img{
+	width: 100%;
+	height: 100%;
+	max-height: 500px;
+	object-fit: cover;
+}
+
+.menu {
+	overflow: hidden;
+}
+.menu a {
+	float: left;
+	display: block;
+	color: var(--secondary-color);
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	transition: 400ms;
+}
+.menu a:hover {
+	background-color: var(--link-hover-color);
+	transition: 400ms;
+}
+.active {
+	background-color: var(--tertiary-color);
+}
+.menu .icon {
+	display: none;
+}
+
+@media screen and (min-width: 936px){
+	.menu{
+		margin-left: 50px;
+	}
+}
+@media screen and (max-width: 935px) {
+	.menu a:not(.active) {display: none;}
+	.menu a.icon {
+		float: right;
+		display: block;
+		color: var(--secondary-color);
+	}
+}
+@media screen and (max-width: 935px) {
+	.menu.responsive {position: relative;}
+	.menu.responsive .icon {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	.menu.responsive a {
+		float: none;
+		display: block;
+		text-align: left;
+	}
+}
